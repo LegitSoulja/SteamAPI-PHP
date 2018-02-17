@@ -33,7 +33,7 @@ ISteamUserStats::getPlayerBans(STEAM_ID);
 > ### SteamSDK\ISteamUser
 
 ```php
-ISteamUser::getPlayeerSummaries(STEAM_ID);
+ISteamUser::getPlayerSummaries(STEAM_ID);
 ```
 
 ```php
