@@ -6,7 +6,7 @@ SteamSDK for Steam API Development | http://steamcommunity.com/dev
 - ```ISteamNews::getNewsForApp(APP_ID, COUNT, MAX_LENGTH);```
 
 > ###### namespace SteamSDK\ISteamUserStats
-- ```ISteamUserStats::getGlobalAchievementsPercentageForApp(APP_ID);```
+- ```ISteamUserStats::getGlobalAchievementPercentageForApp(APP_ID);```
 - ```ISteamUserStats::getPlayerAchievements(STEAM_ID, APP_ID, LANG);```
 - ```ISteamUserStats::getUserStatsForGame(STEAM_ID, APP_ID);```
 - ```ISteamUserStats::getSchemaForGame(APP_ID);```
