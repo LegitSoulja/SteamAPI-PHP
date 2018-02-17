@@ -1,6 +1,6 @@
 # SteamSDK-PHP
 
-SteamSDK for Steam API Development | http://steamcommunity.com/dev
+SteamSDK for [Steam API Development](http://steamcommunity.com/dev)
 
 > ###### namespace SteamSDK\ISteamNews
 - ```ISteamNews::getNewsForApp(APP_ID, COUNT, MAX_LENGTH);```
@@ -31,3 +31,5 @@ use \SteamSDK\ISteamUserStats as ISteamUserStats;
 use \SteamSDK\ISteamUser as ISteamUser;
 use \SteamSDK\IPlayerServie as IPlayerService;
 ```
+
+Inside of ```SteamSDK.php``` locate the ```Config``` class, find ```STEAM_API_KEY``` and replace it with your steam key found [here](http://steamcommunity.com/dev/apikey)
