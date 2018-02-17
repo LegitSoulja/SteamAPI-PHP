@@ -23,7 +23,7 @@ SteamSDK for [Steam API Development](http://steamcommunity.com/dev)
 
 #### Installation
 
-Include ```SteamSDK.php``, and add this to the header of your php file.
+Include ```SteamSDK.php```, and add this to the header of your php file.
 
 ```
 use \SteamSDK\ISteamNews as ISteamNews;
