@@ -51,7 +51,8 @@ IPlayerService::getRecentlyPlayedGames(STEAM_ID, COUNT);
 ```
 
 ```php
-IPlayerService::isPlayingSharedGame(STEAM_ID, APP_ID);```
+IPlayerService::isPlayingSharedGame(STEAM_ID, APP_ID);
+```
 
 #### Installation
 
