@@ -9,14 +9,14 @@ namespace {
     class Config
     {
         protected const _KEY = 'STEAM_API_KEY';
-        protected const _API = 'http://api.steampowered.com/%s/%s/%s';
+        protected const _API = 'http://api.steampowered.com/%s/%s/%s/';
         protected const _FORMAT = 'json';
         
         public static function getQuery($a)
         {
             $a['key']    = self::_KEY;
             $a['format'] = self::_FORMAT;
-            return '/?' . http_build_query($a);
+            return '?' . http_build_query($a);
         }
         
         public static function getURL($interface, $method, $version, $data)
