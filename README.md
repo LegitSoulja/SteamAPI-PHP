@@ -3,53 +3,54 @@
 SteamSDK for [Steam API Development](http://steamcommunity.com/dev)
 
 > ###### namespace SteamSDK\ISteamNews
-- ```php
+
+```php
 ISteamNews::getNewsForApp(APP_ID, COUNT, MAX_LENGTH);
 ```
 
 > ###### namespace SteamSDK\ISteamUserStats
 
-- ```php
+```php
 ISteamUserStats::getGlobalAchievementPercentageForApp(APP_ID);
 ```
 
-- ```php
+```php
 ISteamUserStats::getPlayerAchievements(STEAM_ID, APP_ID, LANG);
 ```
 
-- ```php
+```php
 ISteamUserStats::getUserStatsForGame(STEAM_ID, APP_ID);
 ```
 
-- ```php
+```php
 ISteamUserStats::getSchemaForGame(APP_ID);
 ```
 
-- ```php
+```php
 ISteamUserStats::getPlayerBans(STEAM_ID);
 ```
 
 > ###### namespace SteamSDK\ISteamUser
 
-- ```php
+```php
 ISteamUser::getPlayeerSummaries(STEAM_ID);
 ```
 
-- ```php
+```php
 ISteamUser::getFriendList(STEAM_ID, RELATIONSHIP (friend, all));
 ```
 
 > ###### namespace SteamSDK\IPlayerService
 
-- ```php
+```php
 IPlayerService::getOwnedGames(STEAM_ID);
 ```
 
-- ```php
+```php
 IPlayerService::getRecentlyPlayedGames(STEAM_ID, COUNT);
 ```
 
-- ```php
+```php
 IPlayerService::isPlayingSharedGame(STEAM_ID, APP_ID);```
 
 #### Installation
