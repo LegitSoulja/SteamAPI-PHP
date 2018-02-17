@@ -37,7 +37,7 @@ ISteamUser::getPlayeerSummaries(STEAM_ID);
 ```
 
 ```php
-ISteamUser::getFriendList(STEAM_ID, RELATIONSHIP (friend, all));
+ISteamUser::getFriendList(STEAM_ID);
 ```
 
 > ### namespace SteamSDK\IPlayerService
