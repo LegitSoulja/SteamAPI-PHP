@@ -45,7 +45,7 @@ namespace SteamSDK {
         
         protected const NAME = "ISteamNews";
         
-        public static function GetNewsForApp($appID, $count = 5, $maxLength = 25)
+        public static function getNewsForApp($appID, $count = 5, $maxLength = 25)
         {
             return Config::request(Config::getURL(self::NAME, 'GetNewsForApp', 'v0002', array(
                 'appid' => $appID,
