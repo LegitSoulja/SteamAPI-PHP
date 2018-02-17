@@ -2,13 +2,13 @@
 
 SteamSDK for [Steam API Development](http://steamcommunity.com/dev)
 
-> ### namespace SteamSDK\ISteamNews
+> ### SteamSDK\ISteamNews
 
 ```php
 ISteamNews::getNewsForApp(APP_ID, COUNT, MAX_LENGTH);
 ```
 
-> ### namespace SteamSDK\ISteamUserStats
+> ### SteamSDK\ISteamUserStats
 
 ```php
 ISteamUserStats::getGlobalAchievementPercentageForApp(APP_ID);
@@ -30,7 +30,7 @@ ISteamUserStats::getSchemaForGame(APP_ID);
 ISteamUserStats::getPlayerBans(STEAM_ID);
 ```
 
-> ### namespace SteamSDK\ISteamUser
+> ### SteamSDK\ISteamUser
 
 ```php
 ISteamUser::getPlayeerSummaries(STEAM_ID);
@@ -40,7 +40,7 @@ ISteamUser::getPlayeerSummaries(STEAM_ID);
 ISteamUser::getFriendList(STEAM_ID);
 ```
 
-> ### namespace SteamSDK\IPlayerService
+> ### SteamSDK\IPlayerService
 
 ```php
 IPlayerService::getOwnedGames(STEAM_ID);
