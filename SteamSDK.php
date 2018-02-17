@@ -1,5 +1,6 @@
 <?php
 
+
 namespace SteamSDK {
     
     class Config
@@ -8,7 +9,7 @@ namespace SteamSDK {
         protected const _API = 'http://api.steampowered.com/%s/%s/%s/';
         protected const _FORMAT = 'json';
         
-        public static function getQuery($a)
+        private static function getQuery($a)
         {
             $a['key']    = self::_KEY;
             $a['format'] = self::_FORMAT;
@@ -42,11 +43,9 @@ namespace SteamSDK {
     class ISteamNews
     {
         
-        protected const NAME = "ISteamNews";
-        
         public static function getNewsForApp($appID, $count = 5, $maxLength = 25)
         {
-            return Config::request(Config::getURL(self::NAME, 'GetNewsForApp', 'v0002', array(
+            return Config::request(Config::getURL(substr(__CLASS__, 9), 'GetNewsForApp', 'v0002', array(
                 'appid' => $appID,
                 'count' => $count,
                 'maxLength' => $maxLength
@@ -58,8 +57,6 @@ namespace SteamSDK {
     class ISteamUserStats
     {
         
-        protected const NAME = 'ISteamUserStats';
-        
         public static function getGlobalStatsForGame($appID, $count = 5)
         {
             
@@ -67,14 +64,14 @@ namespace SteamSDK {
         
         public static function getGlobalAchievementPercentagesForApp($appID)
         {
-            return Config::request(Config::getURL(self::NAME, 'GetGlobalAchievementPercentagesForApp', 'v0002', array(
+            return Config::request(Config::getURL(substr(__CLASS__, 9), 'GetGlobalAchievementPercentagesForApp', 'v0002', array(
                 'gameid' => $appID
             )));
         }
         
         public static function getPlayerAchievements($steamid, $appid, $lang = 'en')
         {
-            return Config::request(Config::getURL(self::NAME, 'GetPlayerAchievements', 'v0001', array(
+            return Config::request(Config::getURL(substr(__CLASS__, 9), 'GetPlayerAchievements', 'v0001', array(
                 'steamid' => $steamid,
                 'appid' => $appid,
                 'language' => $lang
@@ -83,7 +80,7 @@ namespace SteamSDK {
         
         public static function getUserStatsForGame($steamid, $appid)
         {
-            return Config::request(Config::getURL(self::NAME, 'GetUserStatsForGame', 'v0002', array(
+            return Config::request(Config::getURL(substr(__CLASS__, 9), 'GetUserStatsForGame', 'v0002', array(
                 'steamid' => $steamid,
                 'appid' => $appid
             )));
@@ -91,14 +88,14 @@ namespace SteamSDK {
         
         public static function getSchemaForGame($appid)
         {
-            return Config::request(Config::getURL(self::NAME, 'GetSchemaForGame', 'v2', array(
+            return Config::request(Config::getURL(substr(__CLASS__, 9), 'GetSchemaForGame', 'v2', array(
                 'appid' => $appid
             )));
         }
         
         public static function getPlayerBans($steamid)
         {
-            return Config::request(Config::getURL(self::NAME, 'GetPlayerBans', 'v1', array(
+            return Config::request(Config::getURL(substr(__CLASS__, 9), 'GetPlayerBans', 'v1', array(
                 'steamid' => $steamid
             )));
         }
@@ -107,18 +104,17 @@ namespace SteamSDK {
     
     class ISteamUser
     {
-        protected const NAME = 'ISteamUser';
-        
+
         public static function getPlayerSummaries($steamid)
         {
-            return Config::request(Config::getURL(self::NAME, 'GetPlayerSummaries', 'v0002', array(
+            return Config::request(Config::getURL(substr(__CLASS__, 9), 'GetPlayerSummaries', 'v0002', array(
                 'steamids' => $steamid
             )));
         }
         
         public static function getFriendList($steamid, $relationship = 'friend')
         {
-            return Config::request(Config::getURL(self::NAME, 'GetFriendList', 'v0001', array(
+            return Config::request(Config::getURL(substr(__CLASS__, 9), 'GetFriendList', 'v0001', array(
                 'steamid' => $steamid,
                 'relationship' => $relationship
             )));
@@ -131,11 +127,9 @@ namespace SteamSDK {
     class IPlayerService
     {
         
-        protected const NAME = 'IPlayerService';
-        
         public static function getOwnedGames($steamid, $include_info = true, $include_free_games = false)
         {
-            return Config::request(Config::getURL(self::NAME, 'GetOwnedGames', 'v0001', array(
+            return Config::request(Config::getURL(substr(__CLASS__, 9), 'GetOwnedGames', 'v0001', array(
                 'steamid' => $steamid,
                 'include_appinfo' => $include_info,
                 'include_played_free_games' => $include_free_games
@@ -144,7 +138,7 @@ namespace SteamSDK {
         
         public static function getRecentlyPlayedGames($steamid, $count = 5)
         {
-            return Config::request(Config::getURL(self::NAME, 'GetRecentlyPlayedGames', 'v0001', array(
+            return Config::request(Config::getURL(substr(__CLASS__, 9), 'GetRecentlyPlayedGames', 'v0001', array(
                 'steamid' => $steamid,
                 'count' => $count
             )));
@@ -152,7 +146,7 @@ namespace SteamSDK {
         
         public static function isPlayingSharedGame($steamid, $appid)
         {
-            return Config::request(Config::getURL(self::NAME, 'IsPlayingSharedGame', 'v0001', array(
+            return Config::request(Config::getURL(substr(__CLASS__, 9), 'IsPlayingSharedGame', 'v0001', array(
                 'steamid' => $steamid,
                 'appid_playing' => $appid
             )));
