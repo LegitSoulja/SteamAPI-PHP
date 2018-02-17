@@ -66,3 +66,5 @@ use \SteamSDK\IPlayerServie as IPlayerService;
 ```
 
 Inside of ```SteamSDK.php``` locate the ```Config``` class, find ```STEAM_API_KEY``` and replace it with your steam key found [here](http://steamcommunity.com/dev/apikey)
+
+> Feel free to submit PR's of updates, additions or changes.
