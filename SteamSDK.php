@@ -60,35 +60,38 @@ namespace SteamSDK {
                 'maxLength' => $maxLength
             )));
         }
-        
+
+    }
+    
+    class ISteamUserStats
+    {
+		
+		protected const NAME = 'ISteamUserStats';
+		
+        public static function getGlobalStatsForGame($appID, $count = 5)
+        {
+            
+        }
+		
         public static function getGlobalAchievementPercentagesForApp($appID)
         {
             return \Config::request(\Config::getURL(self::NAME, 'GetGlobalAchievementPercentagesForApp', 'v0002', array(
                 'gameid' => $appID
             )));
         }
-        
-        public static function getGlobalStatsForGame($appID, $count = 5)
-        {
-            
-        }
-        
+		
+    }
+    
+    class ISteamUser
+    {
+		protected const NAME = 'ISteamUser';
+		
         public static function getPlayerSummaries($steamid)
         {
             return \Config::request(\Config::getURL(self::NAME, 'GetPlayerSummaries', 'v0002', array(
                 'steamids' => $steamid
             )));
         }
-        
-    }
-    
-    class ISteamUserStats
-    {
-        
-    }
-    
-    class ISteamUser
-    {
     }
     
     
