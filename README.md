@@ -2,6 +2,19 @@
 
 SteamSDK for [Steam API Development](http://steamcommunity.com/dev)
 
+#### Installation
+
+Include ```SteamSDK.php```, and add this to the header of your php file.
+
+```php
+use \SteamSDK\ISteamNews as ISteamNews;
+use \SteamSDK\ISteamUserStats as ISteamUserStats;
+use \SteamSDK\ISteamUser as ISteamUser;
+use \SteamSDK\IPlayerServie as IPlayerService;
+```
+
+Inside of ```SteamSDK.php``` locate the ```Config``` class, find ```STEAM_API_KEY``` and replace it with your steam key found [here](http://steamcommunity.com/dev/apikey)
+
 > ### SteamSDK\ISteamNews
 
 ```php
@@ -54,17 +67,5 @@ IPlayerService::getRecentlyPlayedGames(STEAM_ID, COUNT);
 IPlayerService::isPlayingSharedGame(STEAM_ID, APP_ID);
 ```
 
-#### Installation
-
-Include ```SteamSDK.php```, and add this to the header of your php file.
-
-```php
-use \SteamSDK\ISteamNews as ISteamNews;
-use \SteamSDK\ISteamUserStats as ISteamUserStats;
-use \SteamSDK\ISteamUser as ISteamUser;
-use \SteamSDK\IPlayerServie as IPlayerService;
-```
-
-Inside of ```SteamSDK.php``` locate the ```Config``` class, find ```STEAM_API_KEY``` and replace it with your steam key found [here](http://steamcommunity.com/dev/apikey)
 
 > Feel free to submit PR's of updates, additions or changes.
