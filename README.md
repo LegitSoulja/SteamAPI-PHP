@@ -2,7 +2,7 @@
 
 SteamSDK for [Steam API Development](http://steamcommunity.com/dev)
 
-#### Installation
+### Installation
 
 Include ```SteamSDK.php```, and add this to the header of your php file.
 
@@ -15,13 +15,13 @@ use \SteamSDK\IPlayerServie as IPlayerService;
 
 Inside of ```SteamSDK.php``` locate the ```Config``` class, find ```STEAM_API_KEY``` and replace it with your steam key found [here](http://steamcommunity.com/dev/apikey)
 
-> ### SteamSDK\ISteamNews
+> #### SteamSDK\ISteamNews
 
 ```php
 ISteamNews::getNewsForApp(APP_ID, COUNT, MAX_LENGTH);
 ```
 
-> ### SteamSDK\ISteamUserStats
+> #### SteamSDK\ISteamUserStats
 
 ```php
 ISteamUserStats::getGlobalAchievementPercentageForApp(APP_ID);
@@ -43,7 +43,7 @@ ISteamUserStats::getSchemaForGame(APP_ID);
 ISteamUserStats::getPlayerBans(STEAM_ID);
 ```
 
-> ### SteamSDK\ISteamUser
+> #### SteamSDK\ISteamUser
 
 ```php
 ISteamUser::getPlayerSummaries(STEAM_ID);
@@ -53,7 +53,7 @@ ISteamUser::getPlayerSummaries(STEAM_ID);
 ISteamUser::getFriendList(STEAM_ID);
 ```
 
-> ### SteamSDK\IPlayerService
+> #### SteamSDK\IPlayerService
 
 ```php
 IPlayerService::getOwnedGames(STEAM_ID);
