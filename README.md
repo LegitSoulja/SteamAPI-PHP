@@ -7,6 +7,8 @@ SteamSDK for [Steam API Development](http://steamcommunity.com/dev)
 Include ```SteamSDK.php```, and add this to the header of your php file.
 
 ```php
+include 'SteamSDK.php';
+
 use \SteamSDK\ISteamNews as ISteamNews;
 use \SteamSDK\ISteamUserStats as ISteamUserStats;
 use \SteamSDK\ISteamUser as ISteamUser;
