@@ -75,7 +75,7 @@ namespace SteamSDK {
             )));
         }
         
-        public static function getPlayerAchievements($steamid, $appid, $lang = 'en')
+        public static function getPlayerAchievements($steamid, $appid, $lang = 'english')
         {
             return Config::request(Config::getURL(substr(__CLASS__, 9), 'GetPlayerAchievements', 'v0001', array(
                 'steamid' => $steamid,
