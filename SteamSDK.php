@@ -32,6 +32,7 @@ namespace SteamSDK {
                 $resp = json_decode(curl_exec($curl), true);
             }
             catch (\Exception $ex) {
+                curl_close($curl);
                 throw new \Exception($ex);
             }
             curl_close($curl);
