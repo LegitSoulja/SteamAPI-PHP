@@ -57,9 +57,15 @@ namespace SteamSDK {
     class ISteamUserStats
     {
         
-        public static function getGlobalStatsForGame($appID, $count = 5)
+        public static function getGlobalStatsForGame($appID, $count = 5, $name = array(), $startdate = null, $enddate = null)
         {
-            
+            $data = array('appid'=>$appID, 'count'=>$count);
+            if($startdate != null && $enddate != null) {
+                $data['startdate'] = $startdate;
+                $data['enddate'] = $enddate;
+            }
+            foreach($name as $n => $v)  $data['name['.$n.']'] = $v;
+            return Config::request(Config::getURL(substr(__CLASS__, 9), 'GetGlobalStatsForGame', 'v0002', $data));
         }
         
         public static function getGlobalAchievementPercentagesForApp($appID)
@@ -120,8 +126,6 @@ namespace SteamSDK {
             )));
         }
         
-        
-        
     }
     
     class IPlayerService
@@ -152,7 +156,5 @@ namespace SteamSDK {
             )));
         }
         
-        
     }
-    
 }
