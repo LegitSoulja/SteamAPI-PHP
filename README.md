@@ -24,6 +24,10 @@ ISteamNews::getNewsForApp(APP_ID, COUNT, MAX_LENGTH);
 > #### SteamSDK\ISteamUserStats
 
 ```php
+ISteamUserStats::getGlobalStatsForGame(APP_ID, COUNT, NAMES[], STARTDATE(optional), ENDDATE(optional))
+```
+
+```php
 ISteamUserStats::getGlobalAchievementPercentageForApp(APP_ID);
 ```
 
