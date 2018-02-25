@@ -18,7 +18,7 @@ namespace SteamSDK {
         
         public static function getURL($interface, $method, $version, $data)
         {
-            $url = sprintf(self::_API, $interface, $method, $version, self::_KEY);
+            $url = sprintf(self::_API, $interface, $method, $version);
             $url .= self::getQuery($data);
             return $url;
         }
