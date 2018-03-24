@@ -1,7 +1,7 @@
 <?php
 
 
-namespace SteamSDK {
+namespace SteamAPI {
     
     class Config
     {
