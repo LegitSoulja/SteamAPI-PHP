@@ -1,29 +1,29 @@
-# SteamSDK-PHP
+# SteamAPI-PHP
 
-SteamSDK for [Steam API Development](http://steamcommunity.com/dev)
+SteamAPI for [Steam API Development](http://steamcommunity.com/dev)
 
 ### Installation
 
-Include ```SteamSDK.php```, and add this to the header of your php file.
+Include ```SteamAPI.php```, and add this to the header of your php file.
 
 ```php
-include 'SteamSDK.php';
+include 'SteamAPI.php';
 
-use \SteamSDK\ISteamNews as ISteamNews;
-use \SteamSDK\ISteamUserStats as ISteamUserStats;
-use \SteamSDK\ISteamUser as ISteamUser;
-use \SteamSDK\IPlayerService as IPlayerService;
+use \SteamAPI\ISteamNews as ISteamNews;
+use \SteamAPI\ISteamUserStats as ISteamUserStats;
+use \SteamAPI\ISteamUser as ISteamUser;
+use \SteamAPI\IPlayerService as IPlayerService;
 ```
 
-Inside of ```SteamSDK.php``` locate the ```Config``` class, find ```STEAM_API_KEY``` and replace it with your steam key found [here](http://steamcommunity.com/dev/apikey)
+Inside of ```SteamAPI.php``` locate the ```Config``` class, find ```STEAM_API_KEY``` and replace it with your steam key found [here](http://steamcommunity.com/dev/apikey)
 
-> #### SteamSDK\ISteamNews
+> #### SteamAPI\ISteamNews
 
 ```php
 ISteamNews::getNewsForApp(APP_ID, COUNT, MAX_LENGTH);
 ```
 
-> #### SteamSDK\ISteamUserStats
+> #### SteamAPI\ISteamUserStats
 
 ```php
 ISteamUserStats::getGlobalStatsForGame(APP_ID, COUNT, NAMES[], STARTDATE(optional), ENDDATE(optional))
@@ -49,7 +49,7 @@ ISteamUserStats::getSchemaForGame(APP_ID);
 ISteamUserStats::getPlayerBans(STEAM_ID);
 ```
 
-> #### SteamSDK\ISteamUser
+> #### SteamAPI\ISteamUser
 
 ```php
 ISteamUser::getPlayerSummaries(STEAM_ID);
@@ -59,7 +59,7 @@ ISteamUser::getPlayerSummaries(STEAM_ID);
 ISteamUser::getFriendList(STEAM_ID);
 ```
 
-> #### SteamSDK\IPlayerService
+> #### SteamAPI\IPlayerService
 
 ```php
 IPlayerService::getOwnedGames(STEAM_ID);
